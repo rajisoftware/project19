@@ -18,9 +18,6 @@ def display_Webpage(request):
     LOW=Webpage.objects.filter(name__endswith='raj')
     LOW=Webpage.objects.all()
     LOW=Webpage.objects.filter(Q(name='dhoni')& Q(mail='dhonigmail.com'))
-    LOW=Webpage.objects.filter(name__endswith='raj')
-    LOW=Webpage.objects.filter(name__contains='h')
-    LOW=Webpage.objects.filter(name__regex='[a-zA-Z]{5}')
     d={'topics':LOW}
     return render(request,'display_Webpage.html',d)
 def Access(request):
